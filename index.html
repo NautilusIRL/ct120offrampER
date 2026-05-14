@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="paper-full.min.js"></script>
-</head>
-    <body>
-    </body>
-    <script>
-      function Ball(r, p, v) {
+<!-- Load the Paper.js library -->
+<script type="text/javascript" src="paper-full.min.js"></script>
+<!-- Define inlined PaperScript associate it with myCanvas -->
+<script type="text/paperscript" canvas="shapes">
+// kynd.info 2014
+
+function Ball(r, p, v) {
 	this.radius = r;
 	this.point = p;
 	this.vector = v;
@@ -143,6 +140,10 @@ function onFrame() {
 		balls[i].iterate();
 	}
 }
-    </script>
-  </center>
+
+</script>
+</head>
+<body>
+	<canvas id="shapes" resize></canvas>
+</body>
 </html>
