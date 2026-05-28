@@ -134,10 +134,6 @@ Ball.prototype = {
 
 var balls = [];
 var numBalls = 18;
-document.addEventListener('click', function () {
-	numBalls++;
-	display.textContent = numBalls;
-}
 for (var i = 0; i < numBalls; i++) {
 	var position = Point.random() * view.size;
 	var vector = new Point({
