@@ -133,8 +133,9 @@ Ball.prototype = {
 //--------------------- main ---------------------
 
 var balls = [];
-var numBalls = 18;
-for (var i = 0; i < numBalls; i++) {
+var numBalls = 0;
+
+function AddBall() {
 	var position = Point.random() * view.size;
 	var vector = new Point({
 		angle: 360 * Math.random(),
@@ -143,6 +144,11 @@ for (var i = 0; i < numBalls; i++) {
 	var radius = Math.random() * 60 + 60;
 	balls.push(new Ball(radius, position, vector));
 }
+
+document.addEventListener('click', function () {
+      numBalls++;
+	  AddBall();
+	});
 
 function onFrame() {
 	for (var i = 0; i < balls.length - 1; i++) {
